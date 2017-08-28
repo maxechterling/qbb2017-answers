@@ -2,3 +2,4 @@ fastqc SRR072893.fastq
 hisat2 -p 8 -x ../../data/genomes/BDGP6 SRR072893.fastq -S SRR072893.sam
 samtools sort -@ 8 -o SRR072893.bam SRR072893.sam
 samtools index SRR072893.bam
+stringtie -p 8 -G ../../data/genomes/BDGP6.Ensembl.81.gtf -o SRR072893.gtf -l SRR072893 SRR072893.bam -b .
