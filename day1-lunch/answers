@@ -1,2 +1,15 @@
   538344
      514
+#!genebuild-last-updated 2014-09
+#!genome-build BDGP6
+#!genome-build-accession NCBI:GCA_000001215.4
+#!genome-date 2014-07
+#!genome-version BDGP6
+CDS
+Selenocysteine
+UTR
+exon
+gene
+start_codon
+stop_codon
+transcript
