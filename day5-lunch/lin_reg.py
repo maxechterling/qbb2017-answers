@@ -9,7 +9,6 @@ import pandas as pd
 import numpy as np
 import os 
 import statsmodels.api as sm
-import matplotlib.pyplot as plt
 
 def get_files( dir ):
     """
@@ -39,6 +38,8 @@ def get_dat_data( hist_tab ):
             hist_path = os.path.join( sys.argv[1], hist )
             hist_df = pd.read_csv( hist_path, sep='\t', names=name_list ).sort_values('t_name')
             hist_list.append( list(hist_df[ 'mean' ].values) )
+        # convert from list of columns to list of rows. Need it in this format for OLS.
+        hist_list = np.array(hist_list).transpose()
     else:
         hist_path = os.path.join( sys.argv[1], hist_tab )
         hist_df = pd.read_csv( hist_path, sep='\t', names=name_list ).sort_values('t_name')
@@ -47,19 +48,24 @@ def get_dat_data( hist_tab ):
 
 def lin_fit( hist_bed ):
     """
+    Takes a list with mean histone coverage for a given marker or a np array combining lists for all histone markers.
+    Outputs linear regression report for each histone marker (marker.out) and for the combo of all markers (combined.out)
     """
     hist_list, fpkm_list = get_dat_data( hist_bed )
     hist_list_c = sm.add_constant(hist_list)
     results = sm.OLS(fpkm_list, hist_list_c).fit()
-    output = open(hist_bed.split('.')[0] + '.out', 'w')
+    if type(hist_list) is list:
+        output = open(hist_bed.split('.')[0] + '.out', 'w')
+    else:
+        output = open('combined.out', 'w')
     output.write( str(results.summary()) )
     output.close()
     return
 
-hist_test = get_files( sys.argv[1] )
+def __main__():
+    hist_test = get_files( sys.argv[1] )
+    lin_fit( hist_test )
+    for marker in hist_test:
+        lin_fit( marker )
 
-for mark in hist_test:
-    lin_fit( mark )
-
-#for hist in hist_list:
-#    lin_fit( hist )
+__main__()

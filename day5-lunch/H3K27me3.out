@@ -3,8 +3,8 @@
 Dep. Variable:                      y   R-squared:                       0.005
 Model:                            OLS   Adj. R-squared:                  0.005
 Method:                 Least Squares   F-statistic:                     169.1
-Date:                Sun, 03 Sep 2017   Prob (F-statistic):           1.40e-38
-Time:                        12:10:12   Log-Likelihood:            -2.0490e+05
+Date:                Mon, 04 Sep 2017   Prob (F-statistic):           1.40e-38
+Time:                        12:53:53   Log-Likelihood:            -2.0490e+05
 No. Observations:               34718   AIC:                         4.098e+05
 Df Residuals:                   34716   BIC:                         4.098e+05
 Df Model:                           1                                         
