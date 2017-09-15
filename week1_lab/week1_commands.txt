@@ -1,0 +1,5 @@
+./blastn -query ./week1_query.fa -db nr -remote -evalue .0001 -outfmt "6 sseqid sseq" -num_alignments 1000 -out 1000_homologs.tsv
+
+./make_fa.py blast_alignment.tsv.crdownload > 1000_homologs.fa
+
+mafft 1000_prot.fa > alignment_prot.fa
