@@ -1,0 +1,38 @@
+low_coverage_velvet
+num contigs = 305
+max contig length = 998
+min contig length = 61
+avg contig length = 186.796721
+N50 = 248
+
+
+low_coverage_spades
+num contigs = 128
+max contig length = 1737
+min contig length = 207
+avg contig length = 389.203125
+N50 = 372
+
+
+low_coverage_spades_with_nanopore
+num contigs = 65
+max contig length = 6735
+min contig length = 207
+avg contig length = 1120.215385
+N50 = 2673
+
+
+high_coverage_velvet
+num contigs = 11
+max contig length = 33235
+min contig length = 61
+avg contig length = 9096.454545
+N50 = 19911
+
+
+high_coverage_spades
+num contigs = 1
+max contig length = 100000
+min contig length = 100000
+avg contig length = 100000
+N50 = 100000

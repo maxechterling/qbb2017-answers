@@ -1,0 +1,166 @@
+/usr/local/Cellar/quast/4.5/quast.py ./velvet_low/contigs.fa ./velvet_high/contigs.fa ./spades_low/contigs.fasta ./spades_high/contigs.fasta ./spades_np/contigs.fasta -R reference.fasta
+
+Version: 4.5, 15ca3b9
+
+System information:
+  OS: Darwin-16.7.0-x86_64-i386-64bit (macosx)
+  Python version: 2.7.10
+  CPUs number: 4
+
+Started: 2017-09-20 16:01:03
+
+Logging to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/quast.log
+NOTICE: Maximum number of threads is set to 1 (use --threads option to set it manually)
+
+CWD: /Users/cmdb/qbb2017-answers/week2_lab
+Main parameters: 
+  Threads: 1, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  reference.fasta ==> reference
+
+Contigs:
+  Pre-processing...
+  1  ./velvet_low/contigs.fa ==> velvet_low_contigs
+  2  ./velvet_high/contigs.fa ==> velvet_high_contigs
+  3  ./spades_low/contigs.fasta ==> spades_low_contigs
+  4  ./spades_high/contigs.fasta ==> spades_high_contigs
+  5  ./spades_np/contigs.fasta ==> spades_np_contigs
+
+2017-09-20 16:01:04
+Running Basic statistics processor...
+  Reference genome:
+    reference.fasta, length = 4639675, num fragments = 1, GC % = 50.79
+  Contig files: 
+    1  velvet_low_contigs
+    2  velvet_high_contigs
+    3  spades_low_contigs
+    4  spades_high_contigs
+    5  spades_np_contigs
+  Calculating N50 and L50...
+    1  velvet_low_contigs, N50 = 632, L50 = 5, Total length = 7243, GC % = 50.71, # N's per 100 kbp =  0.00
+    2  velvet_high_contigs, N50 = 19911, L50 = 2, Total length = 99562, GC % = 52.58, # N's per 100 kbp =  0.00
+    3  spades_low_contigs, N50 = 718, L50 = 8, Total length = 15922, GC % = 51.21, # N's per 100 kbp =  0.00
+    4  spades_high_contigs, N50 = 100000, L50 = 1, Total length = 100000, GC % = 52.59, # N's per 100 kbp =  0.00
+    5  spades_np_contigs, N50 = 3698, L50 = 6, Total length = 61012, GC % = 52.37, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/GC_content_plot.pdf
+  Drawing velvet_low_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/velvet_low_contigs_GC_content_plot.pdf
+  Drawing velvet_high_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/velvet_high_contigs_GC_content_plot.pdf
+  Drawing spades_low_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/spades_low_contigs_GC_content_plot.pdf
+  Drawing spades_high_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/spades_high_contigs_GC_content_plot.pdf
+  Drawing spades_np_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/spades_np_contigs_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/coverage_histogram.pdf
+  Drawing velvet_low_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/velvet_low_contigs_coverage_histogram.pdf
+  Drawing velvet_high_contigs coverage histogram (bin size: 7x)...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/velvet_high_contigs_coverage_histogram.pdf
+  Drawing spades_low_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/spades_low_contigs_coverage_histogram.pdf
+  Drawing spades_high_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/spades_high_contigs_coverage_histogram.pdf
+  Drawing spades_np_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/basic_stats/spades_np_contigs_coverage_histogram.pdf
+Done.
+
+2017-09-20 16:01:09
+Running Contig analyzer...
+NOTICE: Previous try of gnuplot compilation was unsuccessful! For forced retrying, please remove /usr/local/Cellar/quast/4.5/quast_libs/gnuplot/make.failed and restart QUAST. 
+  1  velvet_low_contigs
+  1  Logging to files /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_low_contigs.stdout and contigs_report_velvet_low_contigs.stderr...
+  1  Aligning contigs to the reference
+  1  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/velvet_low_contigs \
+     --emem -t 1 --emempath /usr/local/bin/e-mem quast_results/results_2017_09_20_16_01_03/quast_corrected_input/reference.fasta \
+     quast_results/results_2017_09_20_16_01_03/quast_corrected_input/velvet_low_contigs.fa \
+     >> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_low_contigs.stdout \
+     2>> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_low_contigs.stderr
+     The tool returned non-zero. See quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_low_contigs.stderr for stderr.
+
+ERROR!   1  Failed aligning contigs velvet_low_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  2  velvet_high_contigs
+  2  Logging to files /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_high_contigs.stdout and contigs_report_velvet_high_contigs.stderr...
+  2  Aligning contigs to the reference
+  2  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/velvet_high_contigs \
+     --emem -t 1 --emempath /usr/local/bin/e-mem quast_results/results_2017_09_20_16_01_03/quast_corrected_input/reference.fasta \
+     quast_results/results_2017_09_20_16_01_03/quast_corrected_input/velvet_high_contigs.fa \
+     >> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_high_contigs.stdout \
+     2>> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_high_contigs.stderr
+     The tool returned non-zero. See quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_velvet_high_contigs.stderr for stderr.
+
+ERROR!   2  Failed aligning contigs velvet_high_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  3  spades_low_contigs
+  3  Logging to files /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_low_contigs.stdout and contigs_report_spades_low_contigs.stderr...
+  3  Aligning contigs to the reference
+  3  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/spades_low_contigs \
+     --emem -t 1 --emempath /usr/local/bin/e-mem quast_results/results_2017_09_20_16_01_03/quast_corrected_input/reference.fasta \
+     quast_results/results_2017_09_20_16_01_03/quast_corrected_input/spades_low_contigs.fasta \
+     >> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_low_contigs.stdout \
+     2>> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_low_contigs.stderr
+     The tool returned non-zero. See quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_low_contigs.stderr for stderr.
+
+ERROR!   3  Failed aligning contigs spades_low_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  4  spades_high_contigs
+  4  Logging to files /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_high_contigs.stdout and contigs_report_spades_high_contigs.stderr...
+  4  Aligning contigs to the reference
+  4  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/spades_high_contigs \
+     --emem -t 1 --emempath /usr/local/bin/e-mem quast_results/results_2017_09_20_16_01_03/quast_corrected_input/reference.fasta \
+     quast_results/results_2017_09_20_16_01_03/quast_corrected_input/spades_high_contigs.fasta \
+     >> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_high_contigs.stdout \
+     2>> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_high_contigs.stderr
+     The tool returned non-zero. See quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_high_contigs.stderr for stderr.
+
+ERROR!   4  Failed aligning contigs spades_high_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  5  spades_np_contigs
+  5  Logging to files /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_np_contigs.stdout and contigs_report_spades_np_contigs.stderr...
+  5  Aligning contigs to the reference
+  5  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/spades_np_contigs \
+     --emem -t 1 --emempath /usr/local/bin/e-mem quast_results/results_2017_09_20_16_01_03/quast_corrected_input/reference.fasta \
+     quast_results/results_2017_09_20_16_01_03/quast_corrected_input/spades_np_contigs.fasta \
+     >> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_np_contigs.stdout \
+     2>> quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_np_contigs.stderr
+     The tool returned non-zero. See quast_results/results_2017_09_20_16_01_03/contigs_reports/contigs_report_spades_np_contigs.stderr for stderr.
+
+ERROR!   5  Failed aligning contigs spades_np_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+Failed aligning the contigs for all the assemblies. Only basic stats are going to be evaluated.
+WARNING: Please rerun QUAST using --test option to ensure that E-MEM aligner works properly.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2017-09-20 16:01:11
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2017-09-20 16:01:13
+RESULTS:
+  Text versions of total report are saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/report.html
+  PDF version (tables and plots) is saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/report.pdf
+  Icarus (contig browser) is saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/icarus.html
+  Log saved to /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/quast.log
+
+Finished: 2017-09-20 16:01:13
+Elapsed time: 0:00:09.859459
+NOTICEs: 3; WARNINGs: 1; non-fatal ERRORs: 5
+
+Thank you for using QUAST!

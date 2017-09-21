@@ -1,0 +1,7 @@
+1: PREPARING DATA
+2,3: RUNNING e-mem AND CREATING CLUSTERS
+dyld: Library not loaded: /usr/local/opt/gcc/lib/gcc/6/libgomp.1.dylib
+  Referenced from: /usr/local/bin/e-mem
+  Reason: image not found
+sh: line 1: 26209 Abort trap: 6           /usr/local/bin/e-mem -maxmatch -b -l 65 -t 1 -n /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/spades_np_contigs.ntref /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/quast_corrected_input/spades_np_contigs.fasta > /Users/cmdb/qbb2017-answers/week2_lab/quast_results/results_2017_09_20_16_01_03/contigs_reports/nucmer_output/spades_np_contigs.mems
+ERROR: e-mem returned non-zero

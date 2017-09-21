@@ -1,0 +1,6 @@
+Assembly	# contigs (>= 0 bp)	# contigs (>= 1000 bp)	# contigs (>= 5000 bp)	# contigs (>= 10000 bp)	# contigs (>= 25000 bp)	# contigs (>= 50000 bp)	Total length (>= 0 bp)	Total length (>= 1000 bp)	Total length (>= 5000 bp)	Total length (>= 10000 bp)	Total length (>= 25000 bp)	Total length (>= 50000 bp)	# contigs	Largest contig	Total length	Reference length	GC (%)	Reference GC (%)	N50	N75	L50	L75	# N's per 100 kbp	NGA50
+velvet_low_contigs	305	0	0	0	0	0	56973	0	0	0	0	0	11	998	7243	4639675	50.71	50.79	632	542	5	8	0.00	-
+velvet_high_contigs	11	7	7	4	1	0	100061	99562	99562	81134	33235	0	7	33235	99562	4639675	52.58	50.79	19911	13440	2	4	0.00	-
+spades_low_contigs	128	4	0	0	0	0	49818	5313	0	0	0	0	20	1737	15922	4639675	51.21	50.79	718	635	8	13	0.00	-
+spades_high_contigs	1	1	1	1	1	1	100000	100000	100000	100000	100000	100000	1	100000	100000	4639675	52.59	50.79	100000	100000	1	1	0.00	-
+spades_np_contigs	65	20	3	0	0	0	72814	58394	19533	0	0	0	24	6735	61012	4639675	52.37	50.79	3698	1843	6	12	0.00	-

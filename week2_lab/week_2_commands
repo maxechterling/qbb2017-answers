@@ -1,0 +1,18 @@
+# velvet commands
+time velveth velvet_low 31 -fastq -separate reads_low_1.fastq reads_low_2.fastq
+time velvetg ./velvet_low
+
+# spades commands
+time spades.py -1 reads_low_1.fastq -2 reads_low_2.fastq -o ./spades_low
+ 
+# lastz alignment
+time lastz reference.fasta ./velvet_low/contigs.fa --format=general:zstart1,end1,name2 --chain --output=velvet_low_dot.out
+
+# sort lastz by start position on reference
+sort -k 1 -n velvet_low_dot.out > velvet_low_dot_sorted.out
+
+# spades w/ nanopore
+time spades.py -1 reads_low_1.fastq -2 reads_low_2.fastq --nanopore MAP006.subset.fa -o ./spades_np
+
+# quast
+quast ./velvet_low/contigs.fa ./velvet_high/contigs.fa ./spades_low/contigs.fasta ./spades_high/contigs.fasta ./spades_np/contigs.fasta -R reference.fasta 
