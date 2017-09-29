@@ -1,0 +1,9 @@
+1) Located on chrXII base 460505. G to A SNP upstream of a gene. 
+
+2) Located on chrXII base 460477. Deletion of a T in a poly-T site upstream of a gene.
+
+3) Located on chrIII base 310319. G to C SNP upstream of a gene.
+
+4) Located on chrXII base 460011. A to G SNP upstream of a gene.
+
+5) Located on chrVIII base 211655. T to G SNP in an ORF (YHR052W). Causes a leucine to valine missense mutation. SGD calls YHR052W a 'dubious' gene that likely doesn't encode a protein.
