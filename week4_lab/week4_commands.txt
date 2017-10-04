@@ -1,2 +1,5 @@
 # PCA
 plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pca 2 --allow-extra-chr --mind
+
+# GWAS pheno must be a single phenotype w/ 
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno pheno1_test.txt --allow-no-sex --linear --allow-extra-chr --out test
