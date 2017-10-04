@@ -1,0 +1,2 @@
+# PCA
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pca 2 --allow-extra-chr --mind
