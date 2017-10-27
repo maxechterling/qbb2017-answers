@@ -16,10 +16,11 @@ bedtools intersect -a ./peaks/G1E_peaks.narrowPeak -b ./peaks/ER4_peaks.narrowPe
 ## find gained peaks (G1E --> ER4)
 bedtools intersect -a ./peaks/ER4_peaks.narrowPeak -b ./peaks/G1E_peaks.narrowPeak -v > diff_gained.bed
 
-## get motif sequences
-bedtools getfasta -fi genomes/chr19.fa -bed peaks/G1E_peaks.narrowPeak > G1E.fa
-bedtools getfasta -fi genomes/chr19.fa -bed peaks/ER4_peaks.narrowPeak > ER4.fa
-cat G1E.fa ER4.fa > CTCF_motif.fa
+## Sort top results
+sort -k 7 -n -r peaks/ER4_peaks.narrowPeak > top.narrowPeak
 
-## run meme
-/usr/local/opt/meme/bin/meme-chip -db motif_databases/ CTCF_motif.fa 
+## get motif sequences
+bedtools getfasta -fi genomes/chr19.fa -bed top_ER4_peaks.narrowPeak > top_ER4.fa
+
+## actual meme
+/usr/local/opt/meme/bin/meme-chip -db motif_databases/JASPAR/JASPAR_CORE_2016_vertebrates.meme -meme-maxw 20 top_ER4.fa 
