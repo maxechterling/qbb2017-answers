@@ -41,22 +41,31 @@ def ctcf_indices( primers, ctcf_sites ):
     return ind
 
 def ixn_pairs( fwd_ind, rev_ind, enr ):
-    pairs = []
+    fwd_pairs, rev_pairs = [], []
     for fwd in fwd_ind:
         top_rev, top = None, 0.
         for rev in rev_ind:
             if float( enr[ fwd ][ rev ] ) > top:
                 top_rev = rev
                 top = float( enr[ fwd ][ rev ] )
-        pairs.append( ( fwd, top_rev ) )
-    return pairs
+        fwd_pairs.append( ( fwd, top_rev ) )
+    for rev in rev_ind:
+        top_for, top = None, 0.
+        for fwd in fwd_ind:
+            if float( enr[ fwd ][ rev ] ) > top:
+                top_for = fwd
+                top = float( enr[ fwd ][ rev ] )
+        rev_pairs.append( ( top_for, rev ) )
+    return fwd_pairs, rev_pairs
 
-def name_ixns( fwd, rev, pairs, primer_dic ):
+def name_ixns( fwd, rev, pairs, primer_dic, direction ):
     for ixn in pairs:
         fw_key = str( fwd[ ixn[0] ][0] ) + '_' + str( fwd[ ixn[0] ][1] )
         rv_key = str( rev[ ixn[1] ][0] ) + '_' + str( rev[ ixn[1] ][1] )
-        print '%s\t%s' % ( primer_dic[ fw_key ], primer_dic[ rv_key ] )
-
+        if direction == 'fwd':
+            print '%s\t%s' % ( primer_dic[ fw_key ], primer_dic[ rv_key ] )
+        else:
+            print '%s\t%s' % ( primer_dic[ rv_key ], primer_dic[ fw_key ] )
 def main():
     ## load in all data
     ctcf_sites = ctcf_binding()
@@ -65,9 +74,12 @@ def main():
     ## get indices of ctcf binding sites in hifive data
     fwd_ind, rev_ind = ctcf_indices( fwd, ctcf_sites ), ctcf_indices( rev, ctcf_sites )
     ## find top interacting ctcf pairs
-    pairs = ixn_pairs( fwd_ind, rev_ind, enr )
+    fwd_pairs, rev_pairs = ixn_pairs( fwd_ind, rev_ind, enr )
     ## map top interactions to primer names
-    name_ixns(fwd, rev, pairs, primer_dic )
+    print 'Top interactions with forward primers:'
+    name_ixns(fwd, rev, fwd_pairs, primer_dic, 'fwd' )
+    print '\nTop interactions with reverse primers:'
+    name_ixns(fwd, rev, rev_pairs, primer_dic, 'rev' )
         
 main()
 
