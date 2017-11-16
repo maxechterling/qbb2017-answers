@@ -48,12 +48,11 @@ def plot_dendrogram( linky, labels, out_nm ):
     
 def main():
     data_df = pd.read_csv( sys.argv[1], sep='\t' )
-    print data_df
     labels = [ 'CFU', 'poly', 'unk', 'int', 'mys', 'mid' ]
     data_df_oi = data_df[ labels ]
     h_transformed, labels_tr, linky, leavesy = hierch_clustering( data_df_oi, labels )
     plot_heatmap( 'hierarchical clustered gene expression', labels_tr, h_transformed, 'hierch_clustered_heatmap.png' )
-    plot_dendrogram( linky, labels, 'dendrogram.png' )
+    plot_dendrogram( linky, labels_tr, 'dendrogram.png' )
     k_transformed, k_labels = k_means_clustering( data_df_oi )
     k_transformed = k_transformed[ :,leavesy ]
     plot_heatmap( 'k-means clustered gene expression, k=5', labels_tr, k_transformed, 'k_means_clustered_heatmap.png')
