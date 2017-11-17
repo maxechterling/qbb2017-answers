@@ -1,0 +1,1 @@
+Lgals9 was the most significant upregulated gene between early and late cell-types (assuming I chose the right early and late cell-types). GO analysis classifies this gene as a cell adhesion and signalling molecule. A literature search seems to indicate that Lgals9 (galectin 9) plays a role in the regulation of immune cell expansion and apoptosis.
