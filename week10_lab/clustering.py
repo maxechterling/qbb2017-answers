@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 
 def hierch_clustering( data_df_oi, labels ):
     flipped = np.transpose( data_df_oi.values )
-    linkx, linky = linkage( data_df_oi.values ), linkage( flipped )
+    linkx, linky = linkage( data_df_oi.values, method='average' ), linkage( flipped, method='average' )
     leavesx, leavesy = leaves_list( linkx ), leaves_list( linky )
     transformed = data_df_oi.values[ leavesx,: ][ :,leavesy]
     labels_tr = np.array( labels )[leavesy]
@@ -52,7 +52,7 @@ def main():
     data_df_oi = data_df[ labels ]
     h_transformed, labels_tr, linky, leavesy = hierch_clustering( data_df_oi, labels )
     plot_heatmap( 'hierarchical clustered gene expression', labels_tr, h_transformed, 'hierch_clustered_heatmap.png' )
-    plot_dendrogram( linky, labels_tr, 'dendrogram.png' )
+    plot_dendrogram( linky, labels, 'dendrogram.png' )
     k_transformed, k_labels = k_means_clustering( data_df_oi )
     k_transformed = k_transformed[ :,leavesy ]
     plot_heatmap( 'k-means clustered gene expression, k=5', labels_tr, k_transformed, 'k_means_clustered_heatmap.png')
