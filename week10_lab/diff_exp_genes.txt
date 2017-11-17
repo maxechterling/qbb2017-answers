@@ -152,6 +152,6 @@ Pdxk	3.00945266851	0.048563236158
 Rcn3	0.233975052468	0.0495446035926
 
 
-genes clustered with Map3k6 (k=30)
+genes clustered with Lgals9 (k=7)
 
 Rsl1d1, Tnfrsf13b, Ptpn6, Sox12, Myo1g, Slc19a1, Capg, Coro2a, Gcsh, Sept1, Spint2, Stat5a, Ydjc, Fyn, Hells, Arap3, Stard8, Sigmar1, Idh2, Impa2, Igsf8, Lpcat4, Bri3bp, Rrp15, Gp5, Itpkb, Dus4l, Marcksl1, Smyd5, Serf1, Fabp5, Gm11974, Rasl11a, Map3k6, Gm13157, Dlc1, Hcls1, Nefh, Lgals9, Samsn1, Tfap4, Rps29, Kit, Bzw2, Cdk6, Myb, Eef1g, Ergic1, Hif3a, Zfp710, Ccdc8, Fzd7, Flna, 1300001I01Rik, Mettl1, Npm3, Casp3, Gpatch4, Hmga1, Slc41a3, Mir3062, Arhgap9, Bid, Spn, Jak3, Mki67ip, Etv5, Fam65a, Pdxk, Kif21b, Dnmt3b, Rpl26, Npm1, Sept9, 5730408K05Rik, Sipa1l1
