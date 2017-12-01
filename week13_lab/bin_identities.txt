@@ -1,0 +1,16 @@
+bin.1
+Staphylococcus haemolyticus
+bin.2
+Leuconostoc citreum
+bin.3
+Staphylococcus lugdunensis
+bin.4
+Enterococcus faecalis
+bin.5
+Cutibacterium avidum
+bin.6
+Staphylococcus epidermidis
+bin.7
+Staphylococcus aureus
+bin.8
+Anaerococcus prevotii
