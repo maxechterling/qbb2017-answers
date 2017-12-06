@@ -1,0 +1,9 @@
+1) By far the most dominant microbiota across samples is Enterococcus faecalis. Over the first 8 days the population of this bacteria appears to expand in the first couple days before shrinking back down. Staphylococcus epidermidis abundance tends to increase over time. Cutibacterium avidum abundance seems to be the most dynamic, starting out quite abundant at day 0 before disappearing at day 1 and reappearing in force by day 8.
+
+2) We can group contigs by metrics like their read abundance and by the GC content which should be species specific. We could also group them by their kmer profiles, i.e. how often particular kmers occur in each contig.
+
+3) 
+
+4) To more robustly estimate taxonomy of a bin, I would compare the KRAKEN classifications in a bin for each assembled contig instead of for a single contig. I would then choose the classification that occured at the highest frequency across the contigs.
+
+5) The heatmap more or less recapitulates the trends I observed in the read taxonomy distributions. One apparent difference is in the Cutibacterium avidum heatmap where there isn't a high abundance at the earliest and latest timepoints whereas I did observe this trend in the read taxonomy distributions.
