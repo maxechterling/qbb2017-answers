@@ -27,7 +27,7 @@ def hierch_clustering( data_df_oi, labels ):
     flipped = np.transpose( data_df_oi.values )
     linkx, linky = linkage( data_df_oi.values, method='average' ), linkage( flipped, method='average' )
     leavesx, leavesy = leaves_list( linkx ), leaves_list( linky )
-    transformed = data_df_oi.values[ leavesx,: ][ :,leavesy]
+    transformed = data_df_oi.values[ leavesx,: ]
     labels_tr = np.array( labels )[leavesx]
     return transformed, labels_tr, linky, leavesy
     
@@ -47,3 +47,4 @@ tr, tr_genome_labels, linky, leavesy = hierch_clustering( data, genomes )
 data_tr = pd.DataFrame( tr, columns=data.columns, index=tr_genome_labels )[['SRR492183', 'SRR492186', 'SRR492188', 'SRR492189', 'SRR492190', 'SRR492193', 'SRR492194', 'SRR492197']]
 stage_labels = data_tr.columns
 plot_heatmap( data_tr, tr_genome_labels, stage_labels  )
+    
